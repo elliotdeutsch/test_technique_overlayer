@@ -1,0 +1,15 @@
+<div class="add-feedback-card" (keydown.enter)="onKeydownEnter($event)">
+  <div class="header">
+    <h2>Partagez Votre Expérience</h2>
+    <p class="subtitle">Vos commentaires nous aident à améliorer notre service</p>
+  </div>
+  <div>
+    <label for="">Comment évaluez-vous votre expérience ?</label>
+    <app-rating [(rating)]="userRating"></app-rating>
+  </div>
+  <app-my-textarea [(userFeedback)]="userFeedback"></app-my-textarea>
+  @if (errorMessage) {
+  <p class="error-message">{{ errorMessage }}</p>
+  }
+  <app-submit-button (feedbackIsSubmitted)="submitFeedback()"></app-submit-button>
+</div>

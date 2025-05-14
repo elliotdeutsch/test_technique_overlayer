@@ -13,7 +13,6 @@ export class SubmitButtonComponent implements OnInit {
   ngOnInit() {}
 
   onSubmit() {
-    console.log('Submit button clicked');
     this.feedbackIsSubmitted.emit(true);
   }
 }

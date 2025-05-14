@@ -1,0 +1,18 @@
+.history-card {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    width: 450px;
+    height: fit-content;
+}
+
+label {
+    font-size: 14px;
+    color: #1f2937;
+    font-weight: 500;
+}

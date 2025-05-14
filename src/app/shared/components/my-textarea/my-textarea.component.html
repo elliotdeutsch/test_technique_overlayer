@@ -1,1 +1,5 @@
-<textarea name="custom-textarea" [(ngModel)]="userFeedback" (input)="emitFeedback()" class="text-area"></textarea>
+<div>
+    <label for="custom-textarea">Parlez-nous de votre expérience</label>
+    <textarea name="custom-textarea" [(ngModel)]="userFeedback" (ngModelChange)="onFeedbackChange($event)"
+        class="text-area" placeholder="Votre experience..."></textarea>
+</div>

@@ -5,11 +5,22 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
+    background: #fcf9ff;
+    width: 100%;
+    height: calc(100vh - 18px);
+    overflow: hidden;
 }
 
 .history-block {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    width: 500px;
+}
+
+hr {
+    width: 100%;
+    width: 450px;
+    height: 1px;
+    background-color: #cccccc;
+    border: none;
 }

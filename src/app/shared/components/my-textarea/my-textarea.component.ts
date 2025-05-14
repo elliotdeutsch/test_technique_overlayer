@@ -1,11 +1,5 @@
 import { CommonModule } from '@angular/common';
-import {
-  Component,
-  EventEmitter,
-  OnInit,
-  Output,
-  SimpleChanges,
-} from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -16,15 +10,14 @@ import { FormsModule } from '@angular/forms';
   imports: [CommonModule, FormsModule],
 })
 export class MyTextareaComponent implements OnInit {
-  public userFeedback: string = '';
-  @Output() public feedback = new EventEmitter<string>();
+  @Input() public userFeedback = '';
+  @Output() public userFeedbackChange = new EventEmitter<string>();
   constructor() {}
 
   ngOnInit() {}
 
-  emitFeedback() {
-    console.log('Feedback emitted:', this.userFeedback);
-    this.feedback.emit(this.userFeedback);
-    this.userFeedback = '';
+  public onFeedbackChange(value: string): void {
+    this.userFeedback = value;
+    this.userFeedbackChange.emit(value);
   }
 }

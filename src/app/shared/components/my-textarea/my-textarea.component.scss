@@ -3,5 +3,12 @@
     height: 100px;
     border-radius: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
+    resize: none;
+}
+
+label {
+    font-size: 14px;
+    color: #1f2937;
+    font-weight: 500;
 }

@@ -1,65 +1,38 @@
-.rating {
-    display: inline-block;
-    position: relative;
-    height: 50px;
-    line-height: 50px;
-    font-size: 50px;
+:host ::ng-deep .custom-rate {
+    color: #ffbb00 !important;
+
+    .p-rating-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    &.disabled {
+        text-align: left !important;
+        width: fit-content;
+        cursor: default !important;
+        margin-top: 0 !important;
+
+        .p-rating-icon {
+            width: 15px;
+            height: 15px;
+        }
+    }
+
+    &:hover {
+        color: #ffaa00 !important;
+
+        &.disabled {
+            color: #ffbb00 !important;
+        }
+    }
 }
 
-.rating label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    cursor: pointer;
-}
-
-.rating label:last-child {
-    position: static;
-}
-
-.rating label:nth-child(1) {
-    z-index: 5;
-}
-
-.rating label:nth-child(2) {
-    z-index: 4;
-}
-
-.rating label:nth-child(3) {
-    z-index: 3;
-}
-
-.rating label:nth-child(4) {
-    z-index: 2;
-}
-
-.rating label:nth-child(5) {
-    z-index: 1;
-}
-
-.rating label input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-}
-
-.rating label .icon {
-    float: left;
-    color: transparent;
-}
-
-.rating label:last-child .icon {
-    color: #000;
-}
-
-.rating:not(:hover) label input:checked~.icon,
-.rating:hover label:hover input~.icon {
-    color: #09f;
-}
-
-.rating label input:focus:not(:checked)~.icon:last-child {
-    color: #000;
-    text-shadow: 0 0 5px #09f;
+.p-rating {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
 }

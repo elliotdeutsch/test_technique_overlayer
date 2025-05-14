@@ -1,0 +1,8 @@
+<div>
+  @if (submitService.feedback()) {
+  <app-card [userFeedback]="submitService.feedback()" [userRating]="submitService.rating()"></app-card>
+  }
+  @else {
+  <p>Aucune feedback enregistré</p>
+  }
+</div>
