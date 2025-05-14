@@ -1,0 +1,15 @@
+.page-layout {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 80px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.history-block {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 500px;
+}

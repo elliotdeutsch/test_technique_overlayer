@@ -1,0 +1,11 @@
+<div class="page-layout">
+  <div>
+    <h1>Historique des feedbacks</h1>
+    <p>{{historyFeedback}}</p>
+  </div>
+  <div class="history-block">
+    <app-rating style="width: 100%;"></app-rating>
+    <app-my-textarea (feedback)="getUserFeedback($event)" style="width: 100%;"></app-my-textarea>
+    <app-submit-button (feedbackIsSubmitted)="submitFeedback($event)" style="width: 100%;"></app-submit-button>
+  </div>
+</div>
